@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação de Slides Futurista</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1f1f1f, #0a0a0a);
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.slider {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+    width: 100%; /* Garante que as slides ocupem a tela toda */
+}
+
+.slide {
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.slide h2 {
+    z-index: 2;
+    font-size: 2.5vw;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 255, 255, 0.2);
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #00ffff;
+}
+
+.slide img {
+    width: 100%;
+    height: calc(100vh - 80px); /* Espaço restante abaixo do título */
+    object-fit: contain; /* Garante que a imagem caiba sem cortar */
+    filter: brightness(80%);
+    margin-top: 80px; /* Garante que a imagem não sobreponha o título */
+    image-rendering: auto; /* Definição suave */
+    image-rendering: crisp-edges; /* Definição nítida em alguns navegadores */
+    image-rendering: high-quality; /* Tentativa de melhorar a qualidade visual */
+}
+
+/* Estilo da nova página "Demonstração Musical com IA" */
+.container {
+    display: flex;
+    width: 100%; /* Ajuste para ocupar toda a página */
+    height: 100%; /* Ajuste para ocupar toda a altura */
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left {
+    width: 50%;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 100px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.logo {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white; /* Cor do texto ajustada para branco */
+}
+
+.logo img {
+    width: 150px; /* Aumento do tamanho da logomarca */
+    height: auto;
+}
+
+.right {
+    width: 50%;
+    background-color: #222;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.lyrics {
+    font-size: 1.2rem;
+    line-height: 1.5; /* Redução do espaçamento entre linhas */
+    white-space: pre-wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lyrics .left-column {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.lyrics .right-column {
+    flex: 1;
+    padding-left: 20px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <h2>Explorando a IA - O Futuro em Nossas Mãos!</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQG_vOVzj87Xvg/feedshare-shrink_800/feedshare-shrink_800/0/1729557542877?e=1732752000&v=beta&t=I4kpKn8PLx5Lu4f2_VOxnoqcdSRHLXy4S3WFHOhTbjY" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <h2>Inteligência Individual</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQG1SJzYA_RvXg/feedshare-shrink_800/feedshare-shrink_800/0/1729557822664?e=1732752000&v=beta&t=K1EWUA6Ih1bQ5KZaAY6nrRcPMwBeNUzJUl0tJeR44Ns" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <h2>Inteligência Social</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQFefCgujoVd_g/feedshare-shrink_800/feedshare-shrink_800/0/1729557953401?e=1732752000&v=beta&t=BC2Q2DbPjuVcIc4dBSleTTa_rDGpPr04mAYTFInmeWM" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <h2>Inteligência Artificial</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQFOJ1MbrNxTvg/feedshare-shrink_800/feedshare-shrink_800/0/1729558030822?e=1732752000&v=beta&t=nRo5n1lnXRTeVgXvlHQaamuh32zHOLl10UG1huHohmI" alt="Slide 4">
+            </div>
+            <div class="slide">
+                <h2>Inteligências: individual, social e artificial</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQFD3a6n4DdzGw/feedshare-shrink_800/feedshare-shrink_800/0/1729558188617?e=1732752000&v=beta&t=9nkOeMMZAqNe7_RyyNWIESJX-ZEiV58e_eVvCYt6IOI" alt="Slide 5">
+            </div>
+            <div class="slide">
+                <h2>IA Fraca e IA Forte</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQFvgf_ZhoOKqQ/feedshare-shrink_800/feedshare-shrink_800/0/1729558306585?e=1732752000&v=beta&t=1S5Q629gbqDfgvSOSRbnaBsa0hnWKCs_RX6ATjdgjR4" alt="Slide 6">
+            </div>
+            <div class="slide">
+                <h2>Tipologia de IA</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQF2pTSD5gyXgQ/feedshare-shrink_800/feedshare-shrink_800/0/1729558365228?e=1732752000&v=beta&t=Ih15rWk_ClbtXxHgZ36jf8OsspdhEpjawD5jq8hh_2A" alt="Slide 7">
+            </div>
+            <div class="slide">
+                <h2>ML, RN e PLN</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQF3Mq5UA3yFGA/feedshare-shrink_800/feedshare-shrink_800/0/1729558524493?e=1732752000&v=beta&t=o1XoWA0FWC10nNcMjkuN4AjYdJZ52-phOIoRvBfzHWY" alt="Slide 8">
+            </div>
+            <div class="slide">
+                <h2>Desafios e Preocupações</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQEJoOPgWgEjog/feedshare-shrink_800/feedshare-shrink_800/0/1729558712699?e=1732752000&v=beta&t=5rVaMXRih7HYWDyz5hWY7y_arMFUrD3aUN4CBEM-eOs" alt="Slide 9">
+            </div>
+            <div class="slide">
+                <h2>Aplicações Práticas</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQGmsPM_KVUysg/feedshare-shrink_800/feedshare-shrink_800/0/1729558639100?e=1732752000&v=beta&t=Ri0xyyym1Mi7UBUWrLobXz5kvO30E8gI3JCUsIOT2R8" alt="Slide 10">
+            </div>            
+            <div class="slide">
+                <h2>Aplicações Cotidianas</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQGzosbxnJLHBw/feedshare-shrink_800/feedshare-shrink_800/0/1729558950216?e=1732752000&v=beta&t=6WH6YKdyn1WAeVQRJslxZ7n3Gc0EMkkUdwh5Spf5gYs" alt="Slide 11">
+            </div>
+            <div class="slide">
+                <h2>IA na Saúde</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQHO-AjmPPc9nQ/feedshare-shrink_800/feedshare-shrink_800/0/1729559112773?e=1732752000&v=beta&t=ZuKeD909MaWB8epEM9Y-fo4mb6jMuip5xGH-htkFjXU" alt="Slide 12">
+            </div>
+            <div class="slide">
+                <h2>IA na Educação</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQGcSpLM0rMc6A/feedshare-shrink_800/feedshare-shrink_800/0/1729559154068?e=1732752000&v=beta&t=tAK82Np2msY__-w96hOIcp9F4tg4RozuZ2R3F0Xq2wY" alt="Slide 13">
+            </div>
+            <div class="slide">
+                <h2>IA no Mercado de Trabalho</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQEZKt3SkFeubQ/feedshare-shrink_800/feedshare-shrink_800/0/1729559195213?e=1732752000&v=beta&t=ifCPo1Iq5ikOTgIEWKhjPzKSd5bpgEyg_sIBfKTSEnE" alt="Slide 14">
+            </div>
+            <div class="slide">
+                <h2>IA na Mobilidade</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQGSy-631-0hhQ/feedshare-shrink_800/feedshare-shrink_800/0/1729559238872?e=1732752000&v=beta&t=Q3X8fnNADzp54Iym_XxeGXJPwGgukmb2dPOfkm3zzeQ" alt="Slide 15">
+            </div>
+            <div class="slide">
+                <h2>IA na Segurança</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQFjqRPGInsQsA/feedshare-shrink_800/feedshare-shrink_800/0/1729559278671?e=1732752000&v=beta&t=Q6kWHJOK0cHRCEiOlBcLBY-6cXH9zvirIE_gzDBGpKs" alt="Slide 16">
+            </div>
+            <div class="slide">
+                <h2>IA no Entretenimento e Mídias Digitais</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQGzsp0uClJHtA/feedshare-shrink_800/feedshare-shrink_800/0/1729559316053?e=1732752000&v=beta&t=hpvOgeHnZFUcO6_U28M4K80brG6Lo87B_WAVdo-g0_w" alt="Slide 17">
+            </div>
+            <div class="slide">
+                <h2>IA na Criação Musical</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQFBnwuNt2xO4w/feedshare-shrink_800/feedshare-shrink_800/0/1729559369520?e=1732752000&v=beta&t=NGaLqggy7YoawWfqlBUP9xkDxKXsl0M7Qc_wmmi6qvc" alt="Slide 18">
+            </div>
+
+             <!-- Início da nova página Demonstração Musical com IA -->
+             <div class="slide">
+                <h2>Demonstração Musical com IA</h2>
+                <div class="container">
+                    <!-- Lado Esquerdo: Iframe com música e logo da IA -->
+                    <div class="left">
+                        <iframe src="https://drive.google.com/file/d/1N7cr-8SP-F-56EB28Zy43lwMddfGnkpq/preview"></iframe>
+                        <div class="logo">
+                            <h3>IA Geradora de Música: Suno</h3>
+                            <img src="https://logowik.com/content/uploads/images/suno-202423211.logowik.com.webp" alt="Logo da IA Suno">
+                        </div>
+                    </div>
+
+                    <!-- Lado Direito: Letra da música -->
+                    <div class="right">
+                        <div class="lyrics">
+                            <div class="left-column">
+                                <p>Cedo da manhã<br>Um aroma doce no ar<br>Xícara na mão<br>Pronto pra me despertar</p>
+                        
+                                <p>Meu corpo aquece<br>Com cada gole suave<br>Cada dia começa<br>Com um sabor que é bom saber</p>
+                        
+                                <p>Café eu amo você<br>Amor que não vai acabar<br>Cada gole me faz viver<br>No teu sabor eu vou ficar</p>
+                            </div>
+                            <div class="right-column">
+                                <p>A vida ganha cor<br>Com você ao meu redor<br>Amargo ou doce amor<br>Você é meu consolo</p>
+                        
+                                <p>Sonhos se realizam<br>Com um café bem quente<br>E quando estou contigo<br>Tudo parece diferente</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Fim da nova página Demonstração Musical com IA -->
+
+            <div class="slide">
+                <h2>IA em Análise de Dados e Inteligência de Negócios</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQEOt1hJQaS4ng/feedshare-shrink_800/feedshare-shrink_800/0/1729559427453?e=1732752000&v=beta&t=8UCoiPm-CCl7JzZKUqQBfBem0bnPDXcfEv_kNnSxIrc" alt="Slide 19">
+            </div>
+            <div class="slide">
+                <h2> IA no Meio Ambiente</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQHGjNtebhd8YQ/feedshare-shrink_800/feedshare-shrink_800/0/1729559519922?e=1732752000&v=beta&t=Y4CYZbKFKLSLWMvZXxoQdDX1axd8wpTt9zLiEdjh_g4" alt="Slide 20">
+            </div>
+            <div class="slide">
+                <h2>IA em Diferentes Produtos e Plataformas</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQFajNF75tYAlQ/feedshare-shrink_800/feedshare-shrink_800/0/1729559630969?e=1732752000&v=beta&t=DWPuis3qUS-zS8xFJGbbGJtpjAYQwPXZ-M7i6bdJcWQ" alt="Slide 21">
+            </div>
+            <div class="slide">
+                <h2>Aplicações Práticas no chatGPT</h2>
+                <img src="https://www.searchenginejournal.com/wp-content/uploads/2024/04/instant-chatgpt-842.jpg" alt="Slide 22">
+            </div>
+            <div class="slide">
+                <h2>Os Perigos da IA</h2>
+                <img src="https://img.buzzarena.com/2024/10/IA-intelligence-artificielle-danger-humanite-Sam-Altman-prix-nobel-Hilton.jpg" alt="Slide 23">
+            </div>
+            <div class="slide">
+                <h2>Boas Práticas com IA</h2>
+                <img src="https://imagenes.eltiempo.com/files/image_1200_600/uploads/2024/03/14/65f2c6f49f364.jpeg" alt="Slide 24">
+            </div>
+            <div class="slide">
+                <h2>O Futuro da IA</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQHtqhnVTqlHqg/feedshare-shrink_800/feedshare-shrink_800/0/1729560117851?e=1732752000&v=beta&t=TiCtMDC17o4Qbm8M3N5j3vKXey0oZ4F5n4_OXvi4hvY" alt="Slide 25">
+            </div>
+            <div class="slide">
+                <h2>Gratidão a Todos!</h2>
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQE3R1UlDf_8pg/feedshare-shrink_800/feedshare-shrink_800/0/1729560075139?e=1732752000&v=beta&t=92C0qWgNG5A3qtvqVtwLe9iyt005QmZWZfM-DYlAkDY" alt="Slide 26">
+            </div>
+        </div>
+    </div>    
+</div>
+</div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slide = document.querySelectorAll('.slide');
+        let index = 0;
+
+        // Função para exibir o slide correto
+        function showSlide(i) {
+            if (i < 0) {
+                index = slide.length - 1;
+            } else if (i >= slide.length) {
+                index = 0;
+            } else {
+                index = i;
+            }
+            slides.style.transform = `translateX(${-index * 100}vw)`;
+        }
+
+        // Navegação com as setas do teclado
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                showSlide(index - 1);
+            } else if (e.key === 'ArrowRight') {
+                showSlide(index + 1);
+            }
+        });
+
+        // Sempre inicia no slide 1
+        window.onload = () => {
+            showSlide(0);
+        };
+    </script>
+
+</body>
+</html>
