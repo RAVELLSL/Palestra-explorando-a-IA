@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorando a IA - o futuro em nossas mãos!</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -158,8 +158,16 @@ iframe {
     padding: 10px;
 }
 
-.material-image img, .qr-code img {
-    width: 90%; /* Ajusta o tamanho das imagens para não ultrapassar o limite */
+.material-image img {
+    width: 90%; /* Ajusta o tamanho da imagem para não ultrapassar o limite */
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.qr-code img {
+    width: 50%; /* Diminui o tamanho do QR Code */
     height: auto;
     object-fit: contain;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
@@ -227,6 +235,10 @@ iframe {
 
     .material-image, .qr-code {
         width: 100%;
+    }
+
+    .qr-code img {
+        width: 70%; /* Ajusta o tamanho do QR Code para telas menores */
     }
 }
 
